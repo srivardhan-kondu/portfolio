@@ -328,91 +328,75 @@ const Experience = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6 text-black">
-            Training Experience Across Institutions
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            Training Experience & Projects
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Comprehensive AI and DSA training delivered across 15+ premier institutions, impacting 9000+ students with hands-on mentorship, placement preparation, and industry-ready project development.
+            Comprehensive training delivered across premier institutions and hands-on mentorship projects designed to build real skills and career readiness.
           </p>
         </div>
 
         {/* Institution Training Cards */}
         <div className="space-y-6 mb-20">
-          {institutions.map((institution, index) => (
-            <div
-              key={index}
-              className="bg-gray-50 rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 relative"
-            >
+          {institutions.map((inst, idx) => (
+            <div key={idx} className="bg-gray-50 rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 relative">
               {/* Status Badge */}
               <div className="absolute top-6 right-6">
-                <span
-                  className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold border ${
-                    institution.status === 'ongoing'
-                      ? 'bg-amber-50 text-amber-800 border-amber-200'
-                      : 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                  }`}
-                >
+                <span className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold ${
+                  inst.status === 'ongoing'
+                    ? 'bg-amber-50 text-amber-800 border border-amber-200'
+                    : 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                }`}>
                   <span className={`h-2 w-2 rounded-full ${
-                    institution.status === 'ongoing' ? 'bg-amber-500' : 'bg-emerald-500'
+                    inst.status === 'ongoing'
+                      ? 'bg-amber-500'
+                      : 'bg-emerald-500'
                   }`}></span>
-                  {institution.status === 'ongoing' ? 'In Progress' : 'Completed'}
+                  {inst.status === 'ongoing' ? 'In Progress' : 'Completed'}
                 </span>
               </div>
 
-              <div className="flex flex-col sm:flex-row sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 mb-4 pr-32">
-                <div className={`p-3 ${institution.color} rounded-xl flex-shrink-0`}>
-                  <institution.icon className="text-white" size={24} />
+              <div className="flex flex-col sm:flex-row sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 mb-4">
+                <div className={`${inst.color} p-3 rounded-xl flex-shrink-0`}>
+                  <inst.icon className="text-white" size={24} />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{institution.name}</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{inst.name}</h3>
                   <div className="flex flex-wrap items-center gap-3 text-sm text-gray-600 mb-3">
                     <span className="flex items-center gap-1">
-                      <MapPin size={14} />
-                      {institution.location}
+                      <MapPin size={14} /> {inst.location}
                     </span>
                     <span>•</span>
                     <span className="flex items-center gap-1">
-                      <Calendar size={14} />
-                      {institution.duration}
+                      <Calendar size={14} /> {inst.duration}
                     </span>
                     <span>•</span>
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                      institution.mode === 'Online' 
-                        ? 'bg-blue-100 text-blue-700' 
+                      inst.mode === 'Online'
+                        ? 'bg-blue-100 text-blue-700'
                         : 'bg-purple-100 text-purple-700'
                     }`}>
-                      {institution.mode}
+                      {inst.mode}
                     </span>
                   </div>
-                  <p className="text-gray-700 leading-relaxed text-base">
-                    {institution.description}
-                  </p>
+                  <p className="text-gray-700 leading-relaxed text-base sm:text-lg">{inst.description}</p>
                 </div>
               </div>
 
               <div className="sm:ml-16 space-y-4">
-                {/* Achievements */}
-                <div>
-                  <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Achievements:</h4>
-                  <ul className="space-y-2">
-                    {institution.achievements.map((achievement, achievementIndex) => (
-                      <li key={achievementIndex} className="flex items-start space-x-3">
-                        <div className="w-1.5 h-1.5 bg-black rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-700 text-sm">{achievement}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Feedback Link */}
+                <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Achievements:</h4>
+                <ul className="space-y-2">
+                  {inst.achievements.map((ach, ai) => (
+                    <li key={ai} className="flex items-start space-x-3">
+                      <div className="w-1.5 h-1.5 bg-black rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-700 text-sm">{ach}</span>
+                    </li>
+                  ))}
+                </ul>
                 <div className="flex justify-end pt-2">
-                  <a
-                    href={institution.feedbackLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-black text-white rounded-xl text-sm font-medium hover:bg-gray-800 transition-all duration-300 shadow-md hover:shadow-lg"
-                  >
-                    <span>View Student Feedback</span>
+                  <a href={inst.feedbackLink} target="_blank" rel="noopener noreferrer"
+                     className="inline-flex items-center gap-2 px-4 py-2 bg-black text-white rounded-xl text-sm font-medium hover:bg-gray-800 transition-all duration-300 shadow-md hover:shadow-lg">
+                    View Student Feedback
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                     </svg>
@@ -423,78 +407,19 @@ const Experience = () => {
           ))}
         </div>
 
-        {/* Other Professional Experience */}
-        <div>
-          <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center text-black">
-            Additional Professional Experience
-          </h3>
-          
-          <div className="space-y-8 mb-20">
-            {otherExperiences.map((exp, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300"
-              >
-                <div className="flex flex-col sm:flex-row sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 mb-4">
-                  <div className={`p-3 ${exp.color} rounded-xl flex-shrink-0`}>
-                    <exp.icon className="text-white" size={24} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{exp.title}</h3>
-                    <div className="flex flex-wrap items-center gap-3 text-sm text-gray-600 mb-3">
-                      <span className="font-medium">{exp.company}</span>
-                      <span>•</span>
-                      <span>{exp.duration}</span>
-                    </div>
-                    <p className="text-gray-700 leading-relaxed text-base">
-                      {exp.description}
-                    </p>
-                  </div>
+        {/* Mentorship / Project Cards */}
+        <div className="grid md:grid-cols-2 gap-6 mb-20">
+          {mentorshipProjects.map((proj, index) => (
+            <div key={index} className="bg-gray-50 rounded-xl p-6 sm:p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center space-x-4 mb-4">
+                <div className={`${proj.color} p-3 rounded-xl flex-shrink-0`}>
+                  <proj.icon className="text-white" size={24} />
                 </div>
-
-                <div className="sm:ml-16">
-                  <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Achievements:</h4>
-                  <ul className="space-y-2">
-                    {exp.achievements.map((achievement, achievementIndex) => (
-                      <li key={achievementIndex} className="flex items-start space-x-3">
-                        <div className="w-1.5 h-1.5 bg-black rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-700 text-sm">{achievement}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <h4 className="text-lg font-bold text-gray-900">{proj.title}</h4>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Selected Mentorship Projects */}
-        <div>
-          <h3 className="text-3xl font-bold text-gray-900 mb-4 text-center text-black">
-            Selected DSA + Python Mentorship Projects
-          </h3>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-12">
-            Specialized training programs and hands-on projects designed to build practical skills and career readiness.
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-6">
-            {mentorshipProjects.map((project, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300"
-              >
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className={`p-3 ${project.color} rounded-xl flex-shrink-0`}>
-                    <project.icon className="text-white" size={24} />
-                  </div>
-                  <h4 className="text-lg font-bold text-gray-900">{project.title}</h4>
-                </div>
-                <p className="text-gray-700 leading-relaxed text-sm">
-                  {project.description}
-                </p>
-              </div>
-            ))}
-          </div>
+              <p className="text-gray-700 leading-relaxed text-sm sm:text-base">{proj.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

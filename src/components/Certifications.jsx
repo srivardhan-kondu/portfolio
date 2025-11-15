@@ -88,26 +88,6 @@ const Certifications = () => {
           </div>
         </div>
 
-        {/* Training Impact & Achievements */}
-        <div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Training Impact & Achievements</h3>
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {achievements.map((achievement, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 text-center"
-              >
-                <div className={`p-4 ${achievement.color} rounded-xl w-16 h-16 mx-auto mb-4 flex items-center justify-center`}>
-                  <achievement.icon className="text-white" size={28} />
-                </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">{achievement.title}</h4>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  {achievement.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
