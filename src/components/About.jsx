@@ -1,98 +1,72 @@
 import React from 'react';
 
+const stats = [
+  { label: 'Students Trained', value: '12,000+' },
+  { label: 'Institutions Served', value: '20+' },
+  { label: 'Placement Rate', value: '92%' },
+  { label: 'Years of Experience', value: '4+' }
+];
+
+const skills = [
+  'Data Structures & Algorithms',
+  'AI & Machine Learning',
+  'Deep Learning',
+  'NLP & Computer Vision',
+  'Python Programming',
+  'Interview Coaching'
+];
+
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gray-50 relative">
+    <section id="about" className="py-16 sm:py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6 text-black">About Me</h2>
-          <div className="w-20 h-1 bg-black mx-auto"></div>
+        <div className="text-center mb-10 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">About Me</h2>
+          <div className="w-16 sm:w-20 h-1 bg-gray-900 mx-auto mt-4"></div>
         </div>
 
-        {/* Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
-          {/* Left Column - About Content */}
-          <div className="space-y-6">
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">My Journey</h3>
-              <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
-                <p>
-                  As a dedicated AI & DSA Trainer, I've had the privilege of mentoring over <span className="font-semibold text-black">12,000+ students</span> across <span className="font-semibold text-black">20+ premier institutions</span> throughout India. My journey in education has been driven by a singular mission: transforming theoretical knowledge into practical, career-ready skills.
-                </p>
-
-                <p>
-                  My teaching methodology combines hands-on project work with real-world problem-solving. Whether it's guiding students through complex Neural Networks achieving 96% accuracy or helping them master Data Structures & Algorithms for top tech placements, I focus on building both technical competence and problem-solving confidence.
-                </p>
-              </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          {/* Left Column */}
+          <div className="space-y-6 flex flex-col items-stretch">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow border border-gray-200 flex flex-col h-full">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">My Story</h3>
+              <p className="text-gray-700 leading-relaxed text-base sm:text-lg flex-1">
+                I empower final-year engineering students to bridge academic learning and industry readiness through focused mentorship in AI, Machine Learning & Data Structures & Algorithms.<br />
+                By simplifying complex concepts into actionable insights and sharpening problem-solving skills, I enable students to confidently navigate campus placements and secure roles at top companies.
+              </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Teaching Philosophy</h3>
-              <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
-                <p>
-                  At Government Engineering College, Thrissur, I achieved <span className="font-semibold text-black">92% placement outcomes</span> through intensive DSA bootcamps. At Sridevi Women's Engineering College, I mentored 150+ students in AI/ML, focusing on industry-ready projects in NLP and Computer Vision.
-                </p>
-
-                <p>
-                  Beyond classroom training, I've designed and delivered specialized programs including <span className="font-semibold text-black">Placement Prep Bootcamps</span>, <span className="font-semibold text-black">Code Sprint Labs</span>, and <span className="font-semibold text-black">Mock Interview Platforms</span>. My goal is not just to teach concepts, but to build careers—empowering students with the skills, confidence, and practical experience needed to excel in the competitive tech industry.
-                </p>
-              </div>
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow border border-gray-200 flex flex-col h-full">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Core Strengths</h3>
+              <ul className="space-y-2 text-gray-700 flex-1">
+                {skills.map((skill, idx) => (
+                  <li key={idx} className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-gray-900 rounded-full flex-shrink-0"></span>
+                    <span>{skill}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
-          {/* Right Column - Stats & Highlights */}
-          <div className="space-y-6">
-            {/* Key Statistics */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Impact at a Glance</h3>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-black mb-2">12,000+</div>
-                  <div className="text-sm text-gray-600">Students Trained</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-black mb-2">20+</div>
-                  <div className="text-sm text-gray-600">Institutions</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-black mb-2">92%</div>
-                  <div className="text-sm text-gray-600">Placement Rate</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-black mb-2">4+</div>
-                  <div className="text-sm text-gray-600">Years Experience</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Expertise Areas */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Areas of Expertise</h3>
-              <div className="space-y-3">
-                {[
-                  'Data Structures & Algorithms',
-                  'Artificial Intelligence & Machine Learning',
-                  'Neural Networks & Deep Learning',
-                  'Natural Language Processing',
-                  'Computer Vision',
-                  'Python Programming',
-                  'Interview Preparation & Coaching',
-                  'Project Development & Mentorship'
-                ].map((skill, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-black rounded-full flex-shrink-0"></div>
-                    <span className="text-gray-700 text-base">{skill}</span>
+          {/* Right Column */}
+          <div className="space-y-6 flex flex-col items-stretch">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow border border-gray-200 flex flex-col h-full">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-5">Impact at a Glance</h3>
+              <div className="grid grid-cols-2 gap-y-4 gap-x-6 text-center flex-1">
+                {stats.map((s, idx) => (
+                  <div key={idx}>
+                    <div className="text-xl sm:text-2xl font-bold text-gray-900">{s.value}</div>
+                    <div className="text-sm sm:text-base text-gray-500 mt-1">{s.label}</div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Mission Statement */}
-            <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 shadow-lg text-white">
-              <h3 className="text-2xl font-bold mb-4">My Mission</h3>
-              <p className="text-gray-100 leading-relaxed">
-                "To bridge the gap between academic learning and industry requirements by providing hands-on, practical training that empowers students to confidently pursue their tech careers."
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow border border-gray-200 flex flex-col h-full">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Mission</h3>
+              <p className="text-gray-700 leading-relaxed text-base sm:text-lg flex-1">
+                Bridge academic learning and industry demands through hands-on training, clear milestones and interview practice.
               </p>
             </div>
           </div>
