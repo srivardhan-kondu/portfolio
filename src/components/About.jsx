@@ -1,10 +1,10 @@
 import React from 'react';
 
 const stats = [
-  { label: 'Students Trained', value: '12,000+' },
-  { label: 'Institutions Served', value: '20+' },
+  { label: 'Students Trained', value: '9,000+' },
+  { label: 'Institutions Served', value: '11' },
   { label: 'Placement Rate', value: '92%' },
-  { label: 'Years of Experience', value: '4+' }
+  { label: 'Years of Experience', value: '3+' }
 ];
 
 const skills = [

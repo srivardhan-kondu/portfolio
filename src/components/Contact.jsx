@@ -2,7 +2,7 @@ import { Mail, Phone, Linkedin } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section className="py-20 bg-white relative">
+    <section className="py-10 bg-white relative">
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-4xl font-bold text-gray-900">Contact Me</h2>

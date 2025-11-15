@@ -138,23 +138,7 @@ const Experience = () => {
       color: "bg-gray-800",
       status: "completed"
     },
-    {
-      name: "Sree Vidyanikethan Engineering College",
-      location: "Tirupati, Andhra Pradesh",
-      duration: "2023",
-      mode: "Offline",
-      description: "Machine learning bootcamp with hands-on implementation of real-time prediction models.",
-      achievements: [
-        "Conducted comprehensive ML bootcamp",
-        "Implemented real-time prediction models",
-        "Hands-on experience with industry tools",
-        "Built production-ready ML systems"
-      ],
-      feedbackLink: "https://docs.google.com/spreadsheets/d/1Eq3px5t6G1qct7M5e9Yf0fzTWxN3BIr5WJfUkPhg-kw/edit?usp=sharing",
-      icon: Award,
-      color: "bg-gray-700",
-      status: "completed"
-    },
+    
     {
       name: "Sreenidhi University",
       location: "Hyderabad, Telangana",
@@ -189,57 +173,9 @@ const Experience = () => {
       color: "bg-gray-800",
       status: "completed"
     },
-    {
-      name: "VIT",
-      location: "Chennai, Tamil Nadu",
-      duration: "2023",
-      mode: "Offline",
-      description: "Placement preparation program with mock interviews, resume guidance, and technical training.",
-      achievements: [
-        "Game-changing placement preparation sessions",
-        "Mock interview practice and feedback",
-        "Professional resume guidance and review",
-        "Helped secure offers from top MNCs"
-      ],
-      feedbackLink: "https://docs.google.com/spreadsheets/d/1AJBsRJijZZpowg91a60r-b8I9vqJBfCxTO7KDMiVOB8/edit?usp=sharing",
-      icon: Briefcase,
-      color: "bg-gray-700",
-      status: "completed"
-    },
-    {
-      name: "Chitkara University",
-      location: "Punjab, India",
-      duration: "In Progress",
-      mode: "Online",
-      description: "Intensive AI & DSA sessions with capstone projects, focusing on deployable applications and product-based interview preparation.",
-      achievements: [
-        "Building deployable application projects",
-        "Product-based company interview preparation",
-        "Capstone project development",
-        "Industry-standard coding practices"
-      ],
-      feedbackLink: "https://docs.google.com/spreadsheets/d/1_M0vlZP0IU1JHMepAAl-HqmsUmUGsFlxHXCjoek8CVM/edit?usp=sharing",
-      icon: Calendar,
-      color: "bg-gray-900",
-      status: "ongoing"
-    },
-    {
-      name: "Kalasalingam Academy of Research and Education",
-      location: "Krishnankoil, Tamil Nadu",
-      duration: "2022 - 2023",
-      mode: "Offline",
-      description: "Research guidance and project supervision leading to publications and conference presentations.",
-      achievements: [
-        "Outstanding research guidance provided",
-        "Supervised academic paper publications",
-        "Supported conference presentation preparation",
-        "Mentored research methodology development"
-      ],
-      feedbackLink: "https://docs.google.com/spreadsheets/d/1s76hGVPFQ72PBkwT-42B2JpNUzTFlF-aQPWJNYSttdg/edit?usp=sharing",
-      icon: Sparkles,
-      color: "bg-gray-800",
-      status: "completed"
-    },
+    
+   
+    
     {
       name: "Hyderabad Institute of Technology and Management",
       location: "Hyderabad, Telangana",
@@ -324,8 +260,8 @@ const Experience = () => {
   ];
 
   return (
-    <section className="py-20 bg-white relative">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-10 bg-white relative">
+      <div className="max-w-6xl mx-auto px-4 sm:px-1 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -337,7 +273,7 @@ const Experience = () => {
         </div>
 
         {/* Institution Training Cards */}
-        <div className="space-y-6 mb-20">
+        <div className="space-y-6 mb-8">
           {institutions.map((inst, idx) => (
             <div key={idx} className="bg-gray-50 rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 relative">
               {/* Status Badge */}
@@ -408,7 +344,7 @@ const Experience = () => {
         </div>
 
         {/* Mentorship / Project Cards */}
-        <div className="grid md:grid-cols-2 gap-6 mb-20">
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
           {mentorshipProjects.map((proj, index) => (
             <div key={index} className="bg-gray-50 rounded-xl p-6 sm:p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
               <div className="flex items-center space-x-4 mb-4">

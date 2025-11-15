@@ -25,7 +25,7 @@ const Certifications = () => {
   const achievements = [
     {
       title: "9000+ Students Mentored",
-      description: "Successfully trained and mentored students across 20+ institutions in AI, DSA, and Python programming",
+      description: "Successfully trained and mentored students across 11 institutions in AI, DSA, and Python programming",
       icon: Users,
       color: "bg-gray-900"
     },
@@ -36,7 +36,7 @@ const Certifications = () => {
       color: "bg-gray-800"
     },
     {
-      title: "4+ Years Experience",
+      title: "3+ Years Experience",
       description: "Extensive experience in AI training, DSA mentoring, and project supervision",
       icon: Calendar,
       color: "bg-gray-700"
@@ -44,7 +44,7 @@ const Certifications = () => {
   ];
 
   return (
-    <section className="py-20 bg-white relative">
+    <section className="py-10 bg-white relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
