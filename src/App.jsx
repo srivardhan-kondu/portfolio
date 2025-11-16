@@ -69,14 +69,15 @@ function App() {
           <Projects />
         </div>
         
-        <div id="student-feedback">
-          <StudentFeedback />
-        </div>
+       
         
         <div id="certifications">
           <Certifications />
         </div>
         
+         <div id="student-feedback">
+          <StudentFeedback />
+        </div>
         <div id="contact">
           <Contact />
         </div>
