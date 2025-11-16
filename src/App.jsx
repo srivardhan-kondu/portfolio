@@ -71,9 +71,6 @@ function App() {
         
        
         
-        <div id="certifications">
-          <Certifications />
-        </div>
         
          <div id="student-feedback">
           <StudentFeedback />
